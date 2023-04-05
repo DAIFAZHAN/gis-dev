@@ -58,6 +58,24 @@ onMounted(() => {
       source: 'tdt-cva'
     })
   })
+
+  // 加载多边形块
+  map.on('style.load', () => {
+    map.addSource('geojson-area-source', {
+      type: 'geojson',
+      // data: geojsonArea // 你得到的geojson
+    })
+    map.addLayer({
+      id: 'geojson-area-layer',
+      type: 'fill',
+      source: 'geojson-area-source',
+      layout: {},
+      paint: {
+        'fill-color': 'red',
+        'fill-opacity': 0.5
+      }
+    })
+  })
 })
 </script>
 <style scoped>
