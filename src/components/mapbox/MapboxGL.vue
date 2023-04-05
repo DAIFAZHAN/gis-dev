@@ -25,7 +25,13 @@ const initOption = {
       {
         id: 'tdt-tiles-layer',
         type: 'raster',
-        source: 'tdt-vec'
+        source: 'tdt-vec',
+        paint: {
+          'raster-brightness-max': 0.7, // 最大亮度
+          'raster-brightness-min': 0.3, // 最小亮度
+          'raster-hue-rotate': 20, // 色相变换的角度
+          'raster-saturation': 0.7 // 饱和度
+        }
       }
     ]
   }
