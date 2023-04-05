@@ -1,7 +1,7 @@
-<script setup></script>
+<script setup>
+import Mapbox from '../components/mapbox/MapboxGL.vue'
+</script>
 
 <template>
-  <main>
-    <div>HomeView</div>
-  </main>
+  <Mapbox />
 </template>
